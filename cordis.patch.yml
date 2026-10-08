@@ -1,0 +1,12 @@
+# Bundle patch for @local/dsh-status-telemetry.
+#
+# This file is applied because the profile lists the bundle in
+# dsh.profile.bundles. Do not also insert this row into the profile's own
+# cordis.patch.yml: the plugin would then load twice, and the second slot
+# registration at the same id and priority would throw.
+#
+# `insert` names are anchored beside this file, so the specifier below resolves
+# to this directory once the bundle is installed in the profile.
+- insert:
+    - id: status-telemetry
+      name: '@local/dsh-status-telemetry'
